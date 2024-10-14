@@ -46,7 +46,7 @@ run_rofi() {
 
 rdp() {
   xfreerdp \
-    -f \
+    -dynamic-resolution \
     -u:"${USER}" \
     -p:"" \
     -v:"192.168.122.254"
