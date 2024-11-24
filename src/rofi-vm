@@ -47,9 +47,11 @@ run_rofi() {
 rdp() {
   xfreerdp \
     -dynamic-resolution \
-    -u:"${USER}" \
-    -p:"" \
-    -v:"192.168.122.254"
+    -u "${USER}" \
+    -p "" \
+    -v "192.168.122.254" \
+    -sound \
+    -microphone
 }
 
 # Execute Command
