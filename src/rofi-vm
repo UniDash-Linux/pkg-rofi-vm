@@ -44,14 +44,20 @@ run_rofi() {
 	echo "${options}" | sed "s/ /\n/g" | rofi_cmd
 }
 
+source ~/.config/rdp-id.sh
+
 rdp() {
   xfreerdp \
     -dynamic-resolution \
     -u "${USER}" \
-    -p "" \
+    -p "${MDP}" \
     -v "192.168.122.254" \
     -sound \
-    -microphone
+    -microphone \
+    -jpeg \
+    -jpeg-quality 100 \
+    -rfx-mode image \
+    -gdi sw
 }
 
 # Execute Command
