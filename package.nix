@@ -3,7 +3,7 @@
   lib,
   makeWrapper,
   rofi-wayland,
-  freerdp3,
+  freerdp,
 }:
 ############
 # Packages #
@@ -50,7 +50,7 @@ stdenv.mkDerivation (finalAttrs: {
   # ----------------------------------------------------------------- #
   postFixup = ''
     wrapProgram $out/bin/${finalAttrs.pname} \
-      --prefix PATH : ${lib.makeBinPath [ rofi-wayland freerdp3 ]}
+      --prefix PATH : ${lib.makeBinPath [ rofi-wayland freerdp ]}
   '';
   # ----------------------------------------------------------------- #
   meta = {
