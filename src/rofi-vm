@@ -57,7 +57,9 @@ rdp() {
     -jpeg \
     -jpeg-quality 100 \
     -rfx-mode image \
-    -gdi sw
+    -gdi sw \
+    -scale $SCALE \
+    -scale-desktop $SCALE
 }
 
 # Execute Command
